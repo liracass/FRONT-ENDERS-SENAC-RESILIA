@@ -42,10 +42,6 @@
     </div>
   </nav>
 
-
-
-
-
   <section class="container-fluid py-5 bg-danger text-center">
     <div class="container">
       <div class="my-5">
@@ -56,9 +52,6 @@
           bla bla bla bla mister brau texto antes da Recuperação
         </h6>
 
-
-
-        
         <section class="h-100">
             <div class="container h-100">
               <div class="row justify-content-sm-center h-100">
@@ -72,13 +65,14 @@
                       <form method="POST" class="formulario" novalidate="" autocomplete="off">
                         <div class="mb-3">
                           <label class="mb-2 text-light" for="email">Email</label>
-                          <input id="email" type="email" class="form-control" name="email" value="" required autofocus>
+                          <input id="psw" type="email" class="form-control" name="email" value="" required autofocus>
                           <div class="invalid-feedback">
                             O campo de email é obrigatório
                           </div>
                         </div>
         
                         <div class="d-flex align-items-center">
+                          <input type="submit" id="btn1" class="btn" value="Enviar código de verificação" >
                           <button type="submit" class="btn btn-dark bg-danger ms-auto">
                             Enviar link
                           </button>
@@ -110,6 +104,6 @@
     <!-- Copyright -->
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  
+  <script src="/scripts/views/validaemail.js"></script>
 </body>
 </html>
