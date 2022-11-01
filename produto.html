@@ -7,6 +7,59 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <title> Nosso Produto </title>
+
+    <style>
+      @keyframes anima {
+          15% {
+            transform: translateX(5px);
+          }
+          30% {
+            transform: translateX(-5px);
+          }
+          50% {
+            transform: translateX(3px);
+          }
+          65% {
+            transform: translateX(-3px);
+          }
+          80% {
+            transform: translateX(2px);
+          }
+          100% {
+           transform: translateX(0);
+          }
+      }
+
+      .card:hover {
+        animation: anima 1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+      }
+
+      .card {
+        box-shadow: 0 0 7px rgba(0, 0, 0, 0.801);
+      }
+
+      .my-5 {
+        margin-bottom: 0 !important;
+      }
+
+      .row {
+        margin: 0;
+      }
+      
+      a {
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.616);
+      }
+
+      .row div {
+        margin-top: 10%;
+      }
+
+</style>
+
+
 </head>
 <body>
 
@@ -17,7 +70,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav me-auto mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
           </li>
@@ -49,7 +102,7 @@
         </h6>
         
         <section>
-            <section class="container mt-3 pt-5 d-flex flex-column mb-2 d-flex justify-content-center">
+            <section class="container mt-3 pt-5 d-flex flex-column d-flex justify-content-center">
                 <h2 class="titulo"> Titulo chamativo pro produto!</h2>
                 <p class="text"> Sub titulo pro produto.
                     <br> Descrição do protudo e beneficios.
@@ -60,13 +113,13 @@
             <section class="container d-flex justify-content-center ">
                 <div class="row d-flex justify-content-evenly mb-5">
     
-                    <article class="d-flex justify-content-center col-11 col-xl-3 col-lg-5 col-md-9 ">
+                    <article class="planos d-flex justify-content-center col-11 col-xl-3 col-lg-5 col-md-9 ">
                         <div class="card mb-4 rounded-3 text-center ">
                             <div class="card-header py-3 bg-dark">
-                                <h4 class="my-0 fw-normal text-light"> Produto 1 <br> ... </h4>
+                                <h4 class="my-0 fw-normal text-light">Bronze</h4>
                             </div>
                             <div class="card-body ">
-                                <h2 class="card-title price">R$ ...<small class="text-muted fw-light">/24x sem
+                                <h2 class="card-title price">R$199,90<small class="text-muted fw-light">/24x sem
                                         juros</small>
                                 </h2>
                                 <ul class="list-unstyled mt-3 mb-4">
@@ -84,10 +137,10 @@
                     <article class="planos d-flex justify-content-center col-11 col-xl-3 col-lg-5 col-md-9 ">
                         <div class="card mb-4 rounded-3 text-center">
                             <div class="card-header py-3 bg-dark">
-                                <h4 class="my-0 fw-normal text-light"> Produto 2 <br> ... </h4>
+                                <h4 class="my-0 fw-normal text-light">Prata</h4>
                             </div>
                             <div class="card-body">
-                                <h2 class="card-title">R$...<small class="text-muted fw-light">/24x sem juros</small>
+                                <h2 class="card-title">R$319,90<small class="text-muted fw-light">/12x sem juros</small>
                                 </h2>
                                 <ul class="list-unstyled mt-3 mb-4">
                                     <li> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam excepturi impedit mollitia at, cupiditate aut tempore. Tenetur nesciunt tempore harum excepturi consectetur animi totam. Amet quibusdam ea deleniti quaerat alias!</li>
@@ -104,10 +157,10 @@
                     <article class="planos d-flex justify-content-center col-11 col-xl-3 col-lg-5 col-md-9">
                         <div class="card mb-4 rounded-3 text-center">
                             <div class="card-header py-3 card-externo-cabecalho bg-dark">
-                                <h4 class="my-0 fw-normal text-light"> Produto 3 <br> ... </h4>
+                                <h4 class="my-0 fw-normal text-light">Ouro</h4>
                             </div>
                             <div class="card-body">
-                                <h2 class="card-title">R$...<small class="text-muted fw-light">/24x sem juros</small>
+                                <h2 class="card-title">R$900,99<small class="text-muted fw-light">/12x sem juros</small>
                                 </h2>
                                 <ul class="list-unstyled mt-3 mb-4">
                                     <li> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, quo quod pariatur nihil, consequatur quisquam nulla facilis, enim harum aperiam saepe deserunt ea quasi ad corrupti accusantium voluptas architecto perspiciatis?</li>
@@ -119,21 +172,60 @@
                                     class="w-100 btn btn-lg botao-cor-especial planos bg-danger">Escolher</a>
                             </div>
                         </div>
-                    </article>
+                      </article>
                 </div>
             </section>
         </section>
     </div>
 </section>
 
-  <footer class="bg-dark text-center text-white">
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2022 Copyright:
-      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+<footer class="bd-footer mt-5 bg-light">
+  <div class="container">
+    <div class="row justify-content-evenly">
+      <div class="col-md-3 col-4 mb-5 text-center">
+        <h5>Quem somos</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/">Home</a></li>
+          <li class="mb-2"><a href="#">Docs</a></li>
+          <li class="mb-2"><a href="#">Examples</a></li>
+          <li class="mb-2"><a href="#">Icons</a></li>
+          <li class="mb-2"><a href="#">Themes</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-3 mb-5 text-center">
+        <h5>Guias</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="#">Getting started</a></li>
+          <li class="mb-2"><a href="#">Starter template</a></li>
+          <li class="mb-2"><a href="#">Webpack</a></li>
+          <li class="mb-2"><a href="#">Parcel</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-4 mb-5 text-center">
+        <h5>Projetos</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="#">Bootstrap</a></li>
+          <li class="mb-2"><a href="#">Bootstrap</a></li>
+          <li class="mb-2"><a href="#">Icons</a></li>
+          <li class="mb-2"><a href="#">RFS</a></li>
+          <li class="mb-2"><a href="#">npm starter</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-8 mb-5"  style = "margin-top: -20px;">
+      <ul class="list-unstyled small text-muted">
+        <img src="./img/tst.gif" class="img-fluid img" alt="">
+        <li class="mb-2 text-center">Designed and built with all the love in the world by the <a href="#">Bootstrap team</a> with the help of <a href="#">our contributors</a>.</li>
+      </ul>
     </div>
-    <!-- Copyright -->
-  </footer>
+    </div>
+  </div>
+</footer>
+
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2022 Copyright:
+    <a href="https://mdbootstrap.com/">Front-Enders | Todos os direitos reservados.</a>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  
 </body>
 </html>
