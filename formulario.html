@@ -65,7 +65,7 @@
                         <div class="row">
                             <div class="col">
                                 <label for="Senha" class="form-label">Senha</label>
-                                <input type="password" class="form-control Mybackground " id="Senha">
+                                <input type="password" class="form-control Mybackground" id="Senha">
                             </div>
                             <div class="col">
                                 <label for="ConfirmaSenha" class="form-label">Confirmar Senha</label>
@@ -74,40 +74,56 @@
                         </div>
 
                         <form class="container" method="get" action=".">
+                          <div class="row">
                             <div class="col-6"> <label class="form-label">Cep:
                             <input  class="form-control" name="cep" type="text" id="cep" value="" size="10" maxlength="9"
-                                   onblur="pesquisacep(this.value);" /></label><br /></div>
+                                   onblur="pesquisacep(this.value);" /></label><br/></div>
 
-                            <div class="col-6"> <label class="form-label">Rua:
-                            <input class="form-control" name="rua" type="text" id="rua" size="60" /></label><br /></div>
+
+                                   <div class="col-6"> <label class="form-label">Rua:
+                                    <input class="form-control" name="rua" type="text" id="rua" size="60"/></label><br/></div>
+
+
+                                   <div class="col-6"> <label class="form-label">Estado:
+                                    <input class="form-control" name="uf" type="text" id="uf" size="2"/></label></div>
+                                  </input>
+
+                              <div class="col-6"> <label class="form-label">Número:
+                                <input class="form-control" name="num" type="text" id="num" size="4"/></label><br /></div>
+                              </input>
+
                             
-                            <div class="col-6"> <label class="form-label">Número:
-                              <input class="form-control" name="num" type="text" id="num" size="60" /></label><br /></div>
+                           
                               <div class="col-6"> <label class="form-label">Complemento:
-                                <input class="form-control" name="comp" type="text" id="comp" size="60" /></label><br /></div>
-                            <div class="col-6"> <label class="form-label">Bairro:
-                            <input class="form-control" name="bairro" type="text" id="bairro" size="40" /></label><br /></div>
-                            <div class="col-6"> <label class="form-label">Cidade:
-                            <input class="form-control" name="cidade" type="text" id="cidade" size="40" /></label><br /></div>
-                            <div class="col-6"> <label class="form-label">Estado:
-                            <input class="form-control" name="uf" type="text" id="uf" size="2" /></label><br /></div>
-                          </form>
+                              <input class="form-control" name="comp" type="text" id="comp" size="60" /></label><br /></div>
 
-                        
+                              <div class="col-6"> <label class="form-label">Bairro:
+                              <input class="form-control" name="bairro" type="text" id="bairro" size="60" /></label><br /></div>
+
+                              <div class="col"> <label class="form-label">Cidade:
+                              <input class="form-control" name="cidade" type="text" id="cidade" size="60"/></label><br/></div>
+                            
+                            </input>
+                            
+                          </div>
+                        </form>
 
                     </div>
+
                     <div id="CampoButton" class="mx-2 mt-2 col">
                         <button class="btn btn-danger" id="Cadastrar">Cadastrar</button>
                     </div>
 
-                </div>    
-
-            </div>      
-
+                  </div>
+                
+              </form>  
+               
         </section>
-    
+
+      </div>
       
     </div>
+    
   </section>
 
   <footer class="bg-dark text-center text-white">
