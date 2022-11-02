@@ -14,3 +14,18 @@
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     align-items: center;
 }
+
+.row {
+    margin: 0;
+}
+  
+#footer-mb a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.616);
+}
+
+#footer-mb div {
+    margin-top: 8%;
+}
