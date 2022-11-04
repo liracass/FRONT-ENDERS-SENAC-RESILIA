@@ -65,3 +65,19 @@ else {
   limpa_formulário_cep();
 }
 };
+
+let nome = document.getElementById("Nome");
+let email = document.getElementById("Email");
+let senha = document.getElementById("Senha");
+let confirmaSenha = document.getElementById("ConfirmaSenha")
+let confirma = document.getElementById("Cadastrar")
+
+confirma.addEventListener('click', function(){
+  if(nome.value === "" || email.value === "" || senha.value === "" || confirmaSenha.value === ""){
+    alert('Preencha todos os campos')
+  }else{
+    alert('Cadastro realizado com sucesso')
+    window.location.href = "index.html"
+  }
+})
+
