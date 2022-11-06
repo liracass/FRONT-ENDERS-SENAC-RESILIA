@@ -8,6 +8,64 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <title> Recuperação de Senha </title>
+    <style>
+      .control {
+        position: relative;
+        border: none;
+        background: none;
+        margin-bottom: 10px;
+      }
+      
+      .control i {
+        position: absolute;
+        top: 42px;
+        right: 10px;
+        visibility: hidden;
+}
+
+      .control small {
+        visibility: hidden;
+        display: flex;
+        margin-top: -10px;
+        font-size: 16px;
+        text-shadow: 1px 0 8px red;
+        font-weight: bolder;
+
+}
+
+.control input {
+    border: 2px solid #3E445B;
+    border-radius: 5px;
+    outline: 0;
+    display: block;
+    font-size: 16px;
+    width: 100%;
+    height: 45px;
+    background: white;
+}
+
+.control.success input {
+    border: 3px solid #4ECA64;
+}
+
+.control.error input {
+    border: 3px solid #DB5A5A;
+}
+
+.control.error i.img-error {
+    visibility: visible;
+}
+
+.control.success i.img-success {
+    visibility: visible;
+}
+
+.control.error small{
+    color: #DB5A5A;
+    visibility: visible;
+}
+
+    </style>
 </head>
 
 <body>
@@ -62,17 +120,18 @@
                     <div class="card-body bg-dark p-5">
                       <img src="img/icon.png" alt="Front-Enders Logo" width="100"><br><br>
                       <h1 class="fs-4 card-title fw-bold mb-4">Recuperação de Senha</h1>
-                      <form method="POST" class="formulario" novalidate="" autocomplete="off">
-                        <div class="mb-3">
+                      <form id="form" class="form">
+                        <div class="control">
                           <label class="mb-2 text-light" for="email">Email</label>
-                          <input id="emailRecup" type="email" class="form-control" name="email" value="" required autofocus>
-                          <div class="invalid-feedback">
-                            O campo de email é obrigatório
-                          </div>
+                          <input id="emailRecup" type="email" class="control" name="email">
+                          <i class="img-success" ><img src="./img/success-icon.svg" alt=""></i>
+                          <i class="img-error" ><img src="./img/error-icon.svg" alt=""></i>
+
+                          <small>Error Message</small>
                         </div>
         
                         <div class="d-flex align-items-center">
-                          <button id="btn2" type="submit" class="btn btn-dark bg-danger ms-auto">
+                          <button id="btn" type="submit" class="btn btn-dark bg-danger ms-auto">
                             Enviar link
                           </button>
                         </div>
