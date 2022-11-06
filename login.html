@@ -7,6 +7,26 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <title> Login </title>
+    <style>
+      .social {
+        display: flex;
+        justify-content: space-between;
+      }
+      
+      .social img {
+        height: 50px;
+        width: 50px;
+      }
+      
+      .teste::after {
+        content: "";
+  background: #000000;
+  height: 3px;
+  display: block;
+  width: 100%;
+  transition: 0.4s;
+      }
+    </style>
 </head>
 <body>
 
@@ -50,9 +70,9 @@
 
 
 
-        <section class="h-100">
-            <div class="container h-100">
-              <div class="row justify-content-sm-center h-100">
+        <section>
+            <div class="container">
+              <div class="row justify-content-sm-center">
                 <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
                   <div class="text-center my-5">
                     <img src="img/icon.png" alt="logo" width="100">
@@ -72,10 +92,10 @@
                         <div class="mb-3">
                           <div class="mb-2 w-100">
                             <label class="text-light for=password">Senha</label>
-                            <a href="recup.html" class="float-end text-danger">
-                              Esqueceu sua senha?
-                            </a>
                           </div>
+                          <a href="recup.html" class="float-end text-danger">
+                            Esqueceu sua senha?
+                          </a>
 
                           <input id="password" type="password" class="form-control" name="password" required>
                           <div class="invalid-feedback">
@@ -143,11 +163,15 @@
             <li class="mb-2"><a href="#">npm starter</a></li>
           </ul>
         </div>
-        <div class="col-md-3 col-8 mb-5"  style = "margin-top: -20px;">
-        <ul class="list-unstyled small text-muted">
+        <div class="col-md-3 col-8 mb-5"  style = "margin-top: 15px;">
+        <ul class="list-unstyled small text-muted teste">
           <img src="./img/tst.gif" class="img-fluid img" alt="">
-          <li class="mb-2 text-center">Designed and built with all the love in the world by the <a href="#">FrontEnders team</a> with the help of <a href="#">our contributors</a>.</li>
         </ul>
+        <figure class="social">
+          <img src="./img/icon.png" class="img-fluid img" alt="">
+          <img src="./img/icon.png" class="img-fluid img" alt="">
+          <img src="./img/icon.png" class="img-fluid img" alt="">
+        </figure>
       </div>
       </div>
     </div>
