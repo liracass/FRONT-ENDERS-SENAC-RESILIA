@@ -7,6 +7,63 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <title> Login </title>
+    <style>
+      .control {
+        position: relative;
+        border: none;
+        background: none;
+        margin-bottom: 10px;
+      }
+      
+      .control i {
+        position: absolute;
+        top: 42px;
+        right: 10px;
+        visibility: hidden;
+}
+
+      .control small {
+        visibility: hidden;
+        display: flex;
+        margin-top: -10px;
+        font-size: 16px;
+        text-shadow: 1px 0 8px red;
+        font-weight: bolder;
+
+}
+
+.control input {
+    border: 2px solid #3E445B;
+    border-radius: 5px;
+    outline: 0;
+    display: block;
+    font-size: 16px;
+    width: 100%;
+    height: 45px;
+    background: white;
+}
+
+.control.success input {
+    border: 3px solid #4ECA64;
+}
+
+.control.error input {
+    border: 3px solid #DB5A5A;
+}
+
+.control.error i.img-error {
+    visibility: visible;
+}
+
+.control.success i.img-success {
+    visibility: visible;
+}
+
+.control.error small{
+    color: #DB5A5A;
+    visibility: visible;
+}
+    </style>
 </head>
 <body>
 
@@ -65,26 +122,28 @@
                       <img src="img/icon.png" alt="Front-Enders Logo" width="100">
                       <h1 class="fs-4 card-title fw-bold mb-4">Login</h1>
                       <form class="form" id="form">
-                        <div class="mb-3">
+                        <div class="control">
                           <label class="mb-2 text-light" for="email">Email</label>
-                          <input id="email" type="email" class="form-control" name="email" value="" required autofocus>
-                          <div class="invalid-feedback">
-                            O campo de email é obrigatório
-                          </div>
+                          <input id="email" type="email" class="control" name="email">
+                          <i class="img-success" ><img src="./img/success-icon.svg" alt=""></i>
+                          <i class="img-error" ><img src="./img/error-icon.svg" alt=""></i>
+
+                          <small>Error Message</small>
                         </div>
 
-                        <div class="mb-3">
+                        <div class="control mb-4">
                           <div class="mb-2 w-100">
-                            <label class="text-light for=password">Senha</label>
-                            <a href="recup.html" class="float-end text-danger">
-                              Esqueceu sua senha?
-                            </a>
+                            <label class="text-light" for="password">Senha</label>
                           </div>
+  
+                          <input id="password" type="password" class="control" name="password">
+                          <a href="recup.html" class="float-end text-danger">
+                            Esqueceu sua senha?
+                          </a>
+                          <i class="img-success" ><img src="./img/success-icon.svg" alt=""></i>
+                          <i class="img-error" ><img src="./img/error-icon.svg" alt=""></i>
 
-                          <input id="password" type="password" class="form-control" name="password" required>
-                          <div class="invalid-feedback">
-                            O campo de senha é obrigatório
-                          </div>
+                          <small>Error Message</small>
                         </div>
 
         
