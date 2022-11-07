@@ -4,7 +4,6 @@ function limpa_formulário_cep() {
   document.getElementById('bairro').value=("");
   document.getElementById('cidade').value=("");
   document.getElementById('uf').value=("");
-  document.getElementById('ibge').value=("");
 }
 
 function meu_callback(conteudo) {
@@ -14,7 +13,6 @@ if (!("erro" in conteudo)) {
   document.getElementById('bairro').value=(conteudo.bairro);
   document.getElementById('cidade').value=(conteudo.localidade);
   document.getElementById('uf').value=(conteudo.uf);
-  document.getElementById('ibge').value=(conteudo.ibge);
 } //end if.
 else {
   //CEP não Encontrado.
@@ -84,57 +82,65 @@ confirma.addEventListener('click', (e) => {
 })
 
 function checkInputs() {
-    
+  
+  let cont = 0; 
+  
   if (nome.value == '') {
     errorValidation(nome, 'Preencha este campo!');
   } else {
     setSuccessFor(nome);
+    cont++;
   }
 
-  if (email.value === "") {
-    
+  if (email.value === "") { 
     errorValidation(email, 'Preencha este campo!');
-  
   } else if (!filtro.test(email.value)) {
-    
     errorValidation(email, 'Email inválido')
-  
   } else {
-
     setSuccessFor(email)
-  
+    cont++;
   }
 
   if (senha.value === "") {
-
     errorValidation(senha, 'Preencha este campo!');
-
   } else if (senha.value.length <= 4 ) {
-    
     errorValidation(senha, 'Mínimo de 5 caracteres!');
-  
   } else {
-
     setSuccessFor(senha)
-
+    cont++;
   }
 
   if (cSenha.value != senha.value) {
-
     errorValidation(cSenha, 'Senha não confere!');
-
   } else if (cSenha.value === '') {
-
     errorValidation(cSenha, 'Preencha este campo!')
-
   } else {
-
     setSuccessFor(cSenha)
-
+    cont++;
   }
 
-  if (cep.value == '' || num.value == '') {
-    alert('Digite todos os campos');
+  if (cep.value == '') {
+    errorValidation(cep, 'Preencha este campo!');
+  } else if (cep.value.length != 8) {
+    errorValidation(cep, 'CEP Inválido');
+  } else {
+    setSuccessFor(cep)
+    cont++;
+  }
+
+  if (num.value == '') {
+    errorValidation(num, 'Preencha este campo!');
+  } else {
+    setSuccessFor(num)
+    cont++;
+  }
+
+  if (cont == 6) {
+    setTimeout (() => {
+    
+      window.location.href = 'index.html'
+  
+    }, 1500);
   }
 
 }
@@ -146,12 +152,15 @@ function errorValidation(input, message) {
 
   small.innerText = message
 
-  control.className = 'control error'
+  control.classList.remove('success');
+  control.classList.add('error');
 }
 
 function setSuccessFor(input) {
   const formControl = input.parentElement;
 
-  formControl.className = 'control success'
+  formControl.classList.remove('error');
+  formControl.classList.add('success');
+  
 }
 
