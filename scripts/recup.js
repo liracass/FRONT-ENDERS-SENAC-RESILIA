@@ -23,7 +23,12 @@ function checkInputs() {
   } else {
 
     setSuccessFor(emailRecup)
-    window.location.href = "login.html"
+    
+    setTimeout (() => {
+    
+      window.location.href = 'index.html'
+  
+    }, 1500);
   
   }   
 }
