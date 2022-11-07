@@ -2,7 +2,9 @@
 <p> Projeto em Squad correspondente ao modulo 2 do curso Programadores Cariocas das instituições SENAC e Resilia. Unidade de Campo Grande, Rio de Janeiro. </p>
 <strong> <a href="https://liracass.github.io/FRONT-ENDERS-SENAC-RESILIA/">Clique aqui</a> para acessar nosso  site</strong>
 <h2> :robot: SOBRE O PROJETO: </h2>
-<p> O Projeto foi criado a partir do desenvolvimento de uma ferramenta para a empresa fíticia FrontEnders no qual pudesse melhorar a industria da tecnologia. de tal modo foi idealizado o <strong>H3-LP DEV</strong>, ou simplesmente, Helpinho. O BOT que da um "HELP" para os desenvolvedores auxiliando em suas atividades.
+<p> O Projeto foi criado a partir do desenvolvimento de uma ferramenta para a empresa fícticia FrontEnders no qual pudesse melhorar a industria da tecnologia. de tal modo foi idealizado o <strong>H3-LP DEV</strong>, ou simplesmente, Helpinho. O BOT que da um "HELP" para os desenvolvedores auxiliando em suas atividades.
+<h2> :eye: SOBRE A EMPRESA: </h2>
+<p> A <strong>Front-Enders</strong> é uma plataforma fictícia de tecnológia na qual seus colaboradores (desenvolvedores) podem se comunicar diariamente, a empresa além de desenvolver BOTs e Serviços para a área da tecnologia também apresenta bibliotecas e cursos relacionados focando também na profissionalização de novos desenvolvedores.</p>
 <h2> :muscle: TIME: </h2> 
 <ul>
 <li><a href="https://github.com/liracass"> Cassiano Lira </a> -- Co-Facilitador </li> 
@@ -16,4 +18,5 @@
 <li>HTML5</li>
 <li>CSS3</li>
 <li>JavaScript</li>
+<li>Bootstrap</li>
 </ul>
