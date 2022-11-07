@@ -138,7 +138,7 @@ function checkInputs() {
   if (cont == 6) {
     setTimeout (() => {
     
-      window.location.href = 'index.html'
+      window.location.href = 'produto.html'
   
     }, 1500);
   }
