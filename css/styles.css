@@ -56,6 +56,13 @@ figure img {
 
 }
 
+.control input:focus {
+    border: 2px solid #ff0000;
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1) .5s;
+    box-shadow: 1px 0 15px rgba(255, 0, 0, 0.356);
+    background: rgba(0, 0, 0, 0.212);
+}
+
 /**Validações**/
 .control {
     position: relative;
@@ -90,6 +97,7 @@ font-size: 16px;
 width: 100%;
 height: 45px;
 background: white;
+text-align: center;
 }
 
 .control.success input {
