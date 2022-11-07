@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <title> Inscreva-se </title>
     <style>
       @media (min-height: 900px){
@@ -17,6 +17,16 @@
       #formCadastro {
         max-width: 1000px;
       }
+
+      .control {
+        max-width: 45%;
+        transition: all .5s;
+      }
+
+      .readon {
+        background: rgb(233, 233, 233) !important;
+      }
+
     </style>
 </head>
 <body>
@@ -63,51 +73,106 @@
                 <div class="card-body bg-light text-dark d-flex align-items-center">
                     <div id="formInp" class="card-text row g-2 mt-3 flex-column">
                         <div class="row justify-content-evenly">
-                            <div class="col-sm-5 col-11 mb-3">
+                            <div class="control col-sm-5 col-11 mb-3">
                                 <label for="Nome" class="form-label">Nome</label>
-                                <input type="text" class="form-control Mybackground" id="Nome">
+                                <input type="text" class="Mybackground" id="Nome">
+
+                                <i class="img-success" ><img src="./img/success-icon.svg" alt=""></i>
+                                <i class="img-error" ><img src="./img/error-icon.svg" alt=""></i>
+
+                                <small class="mt-1">Error Message</small>
                             </div>
-                            <div class="col-sm-5 col-11 mb-3">
+                            <div class="control col-sm-5 col-11 mb-3">
                                 <label for="Email" class="form-label Email">Email</label>
-                                <input type="email" class="form-control Mybackground " id="Email">
+                                <input type="email" class="Mybackground " id="Email">
+
+                                <i class="img-success" ><img src="./img/success-icon.svg" alt=""></i>
+                                <i class="img-error" ><img src="./img/error-icon.svg" alt=""></i>
+
+                                <small class="mt-1">Error Message</small>
                             </div>
                         </div>
                         <div class="row justify-content-evenly">
-                            <div class="col-sm-5 col-11 mb-3">
+                            <div class="control col-sm-5 col-11 mb-3">
                                 <label for="Senha" class="form-label">Senha</label>
-                                <input type="password" class="form-control Mybackground" id="Senha">
+                                <input type="password" class="Mybackground" id="Senha">
+
+                                <i class="img-success" ><img src="./img/success-icon.svg" alt=""></i>
+                                <i class="img-error" ><img src="./img/error-icon.svg" alt=""></i>
+
+                                <small class="mt-1">Error Message</small>
                             </div>
-                            <div class="col-sm-5 col-11 mb-3">
+                            <div class="control col-sm-5 col-11 mb-3">
                                 <label for="ConfirmaSenha" class="form-label">Confirmar</label>
-                                <input type="password" class="form-control Mybackground" id="ConfirmaSenha">
+                                <input type="password" class="Mybackground" id="ConfirmaSenha">
+
+                                <i class="img-success" ><img src="./img/success-icon.svg" alt=""></i>
+                                <i class="img-error" ><img src="./img/error-icon.svg" alt=""></i>
+
+                                <small class="mt-1">Error Message</small>
                             </div>
                         </div>
 
                         <form method="get" action=".">
                           <div class="row justify-content-evenly">
-                            <div class="col-sm-3 col-11 mb-3"> <label class="form-label">Cep:
-                            <input  class="form-control" name="cep" type="text" id="cep" value="" maxlength="9"onblur="pesquisacep(this.value);"
-                            /></label><br/></div>
-                            <div class="col-sm-2 col-11 mb-3"> <label class="form-label">Rua:
-                                    <input class="form-control" name="rua" type="text" id="rua"></label><br/></div>
-                            <div class="col-sm-2 col-11 mb-3"> <label class="form-label">Estado:
-                                    <input class="form-control" name="uf" type="text" id="uf" ></label>
-                                  </input></div>
+                            <div class="control col-sm-3 col-11 mb-3"> <label class="form-label">Cep:</label>
+                            <input name="cep" type="text" id="cep" maxlength="9" onblur="pesquisacep(this.value);"/>
 
-                              <div class="col-sm-2 col-11 mb-3"> <label class="form-label">Número:
-                                <input class="form-control" name="num" type="text" id="num" ></label></div>
-                              </input>
+                            <i class="img-success" ><img src="./img/success-icon.svg" alt=""></i>
+                            <i class="img-error" ><img src="./img/error-icon.svg" alt=""></i>
 
-                              <div class="col-sm-3 col-11 mb-3"> <label class="form-label">Cidade:
-                                <input class="form-control" name="cidade" type="text" id="cidade" ></label><br/></div>
+                            <small class="mt-1">Error Message</small>
+                          </div>
+
+                            <div class="control col-sm-2 col-11 mb-3"> <label class="form-label">Rua:</label>
+                                <input readonly name="rua" class="readon" type="text" id="rua">
+                                <i class="img-success" ><img src="./img/success-icon.svg" alt=""></i>
+                                <i class="img-error" ><img src="./img/error-icon.svg" alt=""></i>
+
+                                <small class="mt-1">Error Message</small>
+                            </div>
+                            <div class="control col-sm-2 col-11 mb-3"> <label class="form-label">Estado:</label>
+                                    <input readonly name="uf" class="readon" type="text" id="uf" >
+                                  </input>
+                                  <i class="img-success" ><img src="./img/success-icon.svg" alt=""></i>
+                                  <i class="img-error" ><img src="./img/error-icon.svg" alt=""></i>
+
+                                  <small class="mt-1">Error Message</small>
                               </div>
-                          <div class="row justify-content-evenly"> 
-                                <div class="col-sm-6 col-11 mb-3"> <label class="form-label">Complemento:
-                                <input class="form-control" name="comp" type="text" id="comp" size="40"></label></div>
 
-                                <div class="col-sm-6 col-11 mb-3"> <label class="form-label">Bairro:
-                                <input class="form-control" name="bairro" type="text" id="bairro" size="40"/></label></div>
+                              <div class="control col-sm-2 col-11 mb-3"> <label for="num" class="form-label">Número:</label>
+                              <input name="num" type="text" id="num" ></input>
+                                <i class="img-success" ><img src="./img/success-icon.svg" alt=""></i>
+                                <i class="img-error" ><img src="./img/error-icon.svg" alt=""></i>
+
+                                <small class="mt-1">Error Message</small>
+                              </div>
+                              
+
+                              <div class="control col-sm-3 col-11 mb-3"> <label class="form-label">Cidade:</label>
+                                <input readonly name="cidade" class="readon" type="text" id="cidade">
+                                <i class="img-success" ><img src="./img/success-icon.svg" alt=""></i>
+                                <i class="img-error" ><img src="./img/error-icon.svg" alt=""></i>
+
+                                <small class="mt-1">Error Message</small>
+                              </div>
+                            </div>
+                          <div class="row justify-content-evenly"> 
+                                <div class="control col-sm-6 col-11 mb-3"> <label class="form-label">Complemento: [OPCIONAL]</label>
+                                <input name="comp" type="text" id="comp" size="40">
+                                <i class="img-success" ><img src="./img/success-icon.svg" alt=""></i>
+                                <i class="img-error" ><img src="./img/error-icon.svg" alt=""></i>
+
+                                <small class="mt-1">Error Message</small>
+                              </div>
+
+                                <div class="control col-sm-6 col-11 mb-3"> <label class="form-label">Bairro:</label>
+                                <input readonly name="bairro" type="text" class="readon" id="bairro" size="40"/>
                                 </input>
+                                <i class="img-success" ><img src="./img/success-icon.svg" alt=""></i>
+                                <i class="img-error" ><img src="./img/error-icon.svg" alt=""></i>
+
+                                <small class="mt-1">Error Message</small>
                           </div>
                         </form>
                         <div id="CampoButton" class="mx-2 mt-2 col">

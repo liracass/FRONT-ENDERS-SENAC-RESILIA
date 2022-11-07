@@ -66,18 +66,92 @@ else {
 }
 };
 
-let nome = document.getElementById("Nome");
-let email = document.getElementById("Email");
-let senha = document.getElementById("Senha");
-let confirmaSenha = document.getElementById("ConfirmaSenha")
-let confirma = document.getElementById("Cadastrar")
+const nome = document.getElementById("Nome");
+const email = document.getElementById("Email");
+const senha = document.getElementById("Senha");
+const cSenha = document.getElementById("ConfirmaSenha");
+const confirma = document.getElementById("Cadastrar");
+const cep = document.getElementById('cep');
+const num = document.getElementById('num');
+const filtro = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
 
-confirma.addEventListener('click', function(){
-  if(nome.value === "" || email.value === "" || senha.value === "" || confirmaSenha.value === ""){
-    alert('Preencha todos os campos')
-  }else{
-    alert('Cadastro realizado com sucesso')
-    window.location.href = "index.html"
-  }
+confirma.addEventListener('click', (e) => {
+  
+  e.preventDefault()
+
+  checkInputs()
+
 })
+
+function checkInputs() {
+    
+  if (nome.value == '') {
+    errorValidation(nome, 'Preencha este campo!');
+  } else {
+    setSuccessFor(nome);
+  }
+
+  if (email.value === "") {
+    
+    errorValidation(email, 'Preencha este campo!');
+  
+  } else if (!filtro.test(email.value)) {
+    
+    errorValidation(email, 'Email inválido')
+  
+  } else {
+
+    setSuccessFor(email)
+  
+  }
+
+  if (senha.value === "") {
+
+    errorValidation(senha, 'Preencha este campo!');
+
+  } else if (senha.value.length <= 4 ) {
+    
+    errorValidation(senha, 'Mínimo de 5 caracteres!');
+  
+  } else {
+
+    setSuccessFor(senha)
+
+  }
+
+  if (cSenha.value != senha.value) {
+
+    errorValidation(cSenha, 'Senha não confere!');
+
+  } else if (cSenha.value === '') {
+
+    errorValidation(cSenha, 'Preencha este campo!')
+
+  } else {
+
+    setSuccessFor(cSenha)
+
+  }
+
+  if (cep.value == '' || num.value == '') {
+    alert('Digite todos os campos');
+  }
+
+}
+
+function errorValidation(input, message) {
+  
+  const control = input.parentElement;
+  const small = control.querySelector('small')
+
+  small.innerText = message
+
+  control.className = 'control error'
+}
+
+function setSuccessFor(input) {
+  const formControl = input.parentElement;
+
+  formControl.className = 'control success'
+}
 
