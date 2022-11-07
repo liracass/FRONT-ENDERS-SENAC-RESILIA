@@ -57,7 +57,7 @@ function errorValidation(input, message) {
 
   small.innerText = message
 
-  control.className = 'control error'
+  control.className = 'control error mb-4'
 }
 
 function setSuccessFor(input) {
