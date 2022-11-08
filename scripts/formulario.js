@@ -72,6 +72,7 @@ const confirma = document.getElementById("Cadastrar");
 const cep = document.getElementById('cep');
 const num = document.getElementById('num');
 const filtro = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+const cepF = /^[0-9]{8}$/;
 
 confirma.addEventListener('click', (e) => {
   
@@ -121,7 +122,7 @@ function checkInputs() {
 
   if (cep.value == '') {
     errorValidation(cep, 'Preencha este campo!');
-  } else if (cep.value.length != 8) {
+  } else if (!(cepF.test(cep))) {
     errorValidation(cep, 'CEP Inválido');
   } else {
     setSuccessFor(cep)
