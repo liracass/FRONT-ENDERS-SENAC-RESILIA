@@ -17,7 +17,14 @@ if (!("erro" in conteudo)) {
 else {
   //CEP não Encontrado.
   limpa_formulário_cep();
-  alert("CEP não encontrado.");
+  const control = cep.parentElement;
+  const small = control.querySelector('small')
+
+  small.innerText = 'CEP não encotrado!';
+
+  control.classList.remove('success');
+  control.classList.add('error');
+  
 }
 }
 
@@ -55,7 +62,6 @@ if (cep != "") {
   else {
       //cep é inválido.
       limpa_formulário_cep();
-      alert("Formato de CEP inválido.");
   }
 } //end if.
 else {
@@ -122,7 +128,7 @@ function checkInputs() {
 
   if (cep.value == '') {
     errorValidation(cep, 'Preencha este campo!');
-  } else if (!(cepF.test(cep))) {
+  } else if (!(cepF.test(cep)) && cep.value.length != 8 && rua.value === '') {
     errorValidation(cep, 'CEP Inválido');
   } else {
     setSuccessFor(cep)
